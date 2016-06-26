@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BEC2526121510362D617CB3 /* Pods_CsvReadSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA87E6724CD4D653D645174 /* Pods_CsvReadSample.framework */; };
 		AFC1769D1D1FF6E100A39CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1769C1D1FF6E100A39CDD /* AppDelegate.swift */; };
-		AFC1769F1D1FF6E100A39CDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC1769E1D1FF6E100A39CDD /* ViewController.swift */; };
 		AFC176A21D1FF6E100A39CDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC176A01D1FF6E100A39CDD /* Main.storyboard */; };
 		AFC176A51D1FF6E100A39CDD /* CsvReadSample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFC176A31D1FF6E100A39CDD /* CsvReadSample.xcdatamodeld */; };
 		AFC176A71D1FF6E100A39CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC176A61D1FF6E100A39CDD /* Assets.xcassets */; };
 		AFC176AA1D1FF6E100A39CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFC176A81D1FF6E100A39CDD /* LaunchScreen.storyboard */; };
+		AFC176B21D1FF74300A39CDD /* MainTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC176B11D1FF74300A39CDD /* MainTableVC.swift */; };
+		AFC176B61D1FFDBE00A39CDD /* newCities.csv in Resources */ = {isa = PBXBuildFile; fileRef = AFC176B51D1FFDBE00A39CDD /* newCities.csv */; };
+		AFC176B81D20052A00A39CDD /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC176B71D20052A00A39CDD /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3280F88335B1B1D388986267 /* Pods-CsvReadSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CsvReadSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CsvReadSample/Pods-CsvReadSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7EA87E6724CD4D653D645174 /* Pods_CsvReadSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CsvReadSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC176991D1FF6E100A39CDD /* CsvReadSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CsvReadSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC1769C1D1FF6E100A39CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFC1769E1D1FF6E100A39CDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AFC176A11D1FF6E100A39CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFC176A41D1FF6E100A39CDD /* CsvReadSample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CsvReadSample.xcdatamodel; sourceTree = "<group>"; };
 		AFC176A61D1FF6E100A39CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC176A91D1FF6E100A39CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFC176AB1D1FF6E100A39CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC176B11D1FF74300A39CDD /* MainTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableVC.swift; sourceTree = "<group>"; };
+		AFC176B51D1FFDBE00A39CDD /* newCities.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = newCities.csv; sourceTree = "<group>"; };
+		AFC176B71D20052A00A39CDD /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		F6E434B3BB6827F923CC7D30 /* Pods-CsvReadSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CsvReadSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-CsvReadSample/Pods-CsvReadSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEC2526121510362D617CB3 /* Pods_CsvReadSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ECCAEC834FBF4EDE8C8CD6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3280F88335B1B1D388986267 /* Pods-CsvReadSample.debug.xcconfig */,
+				F6E434B3BB6827F923CC7D30 /* Pods-CsvReadSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AFC176901D1FF6E100A39CDD = {
 			isa = PBXGroup;
 			children = (
 				AFC1769B1D1FF6E100A39CDD /* CsvReadSample */,
 				AFC1769A1D1FF6E100A39CDD /* Products */,
+				0ECCAEC834FBF4EDE8C8CD6E /* Pods */,
+				B519A174CAE946227C692168 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +76,25 @@
 		AFC1769B1D1FF6E100A39CDD /* CsvReadSample */ = {
 			isa = PBXGroup;
 			children = (
+				AFC176B51D1FFDBE00A39CDD /* newCities.csv */,
+				AFC176B71D20052A00A39CDD /* Extension.swift */,
 				AFC1769C1D1FF6E100A39CDD /* AppDelegate.swift */,
-				AFC1769E1D1FF6E100A39CDD /* ViewController.swift */,
 				AFC176A01D1FF6E100A39CDD /* Main.storyboard */,
+				AFC176B11D1FF74300A39CDD /* MainTableVC.swift */,
 				AFC176A61D1FF6E100A39CDD /* Assets.xcassets */,
 				AFC176A81D1FF6E100A39CDD /* LaunchScreen.storyboard */,
 				AFC176AB1D1FF6E100A39CDD /* Info.plist */,
 				AFC176A31D1FF6E100A39CDD /* CsvReadSample.xcdatamodeld */,
 			);
 			path = CsvReadSample;
+			sourceTree = "<group>";
+		};
+		B519A174CAE946227C692168 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7EA87E6724CD4D653D645174 /* Pods_CsvReadSample.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFC176AE1D1FF6E100A39CDD /* Build configuration list for PBXNativeTarget "CsvReadSample" */;
 			buildPhases = (
+				9E3D176DDA71D2DC4D5EE57B /* [CP] Check Pods Manifest.lock */,
 				AFC176951D1FF6E100A39CDD /* Sources */,
 				AFC176961D1FF6E100A39CDD /* Frameworks */,
 				AFC176971D1FF6E100A39CDD /* Resources */,
+				CBB0CD25DEEB71C9A7030105 /* [CP] Embed Pods Frameworks */,
+				59EDA2AD43E7392CC8E2E904 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,11 +160,60 @@
 			files = (
 				AFC176AA1D1FF6E100A39CDD /* LaunchScreen.storyboard in Resources */,
 				AFC176A71D1FF6E100A39CDD /* Assets.xcassets in Resources */,
+				AFC176B61D1FFDBE00A39CDD /* newCities.csv in Resources */,
 				AFC176A21D1FF6E100A39CDD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59EDA2AD43E7392CC8E2E904 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CsvReadSample/Pods-CsvReadSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E3D176DDA71D2DC4D5EE57B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CBB0CD25DEEB71C9A7030105 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CsvReadSample/Pods-CsvReadSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFC176951D1FF6E100A39CDD /* Sources */ = {
@@ -139,8 +221,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFC176A51D1FF6E100A39CDD /* CsvReadSample.xcdatamodeld in Sources */,
-				AFC1769F1D1FF6E100A39CDD /* ViewController.swift in Sources */,
+				AFC176B21D1FF74300A39CDD /* MainTableVC.swift in Sources */,
 				AFC1769D1D1FF6E100A39CDD /* AppDelegate.swift in Sources */,
+				AFC176B81D20052A00A39CDD /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +336,7 @@
 		};
 		AFC176AF1D1FF6E100A39CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3280F88335B1B1D388986267 /* Pods-CsvReadSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CsvReadSample/Info.plist;
@@ -264,6 +348,7 @@
 		};
 		AFC176B01D1FF6E100A39CDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6E434B3BB6827F923CC7D30 /* Pods-CsvReadSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CsvReadSample/Info.plist;
@@ -292,6 +377,7 @@
 				AFC176B01D1FF6E100A39CDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
