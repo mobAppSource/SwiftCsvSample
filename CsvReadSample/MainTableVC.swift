@@ -37,11 +37,12 @@ class MainTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDe
         self.readCSV()
         //search controller
         
-        searchController.searchResultsUpdater = self
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchBar.delegate = self
-        definesPresentationContext = true
+        self.searchController.searchResultsUpdater = self
+        self.searchController.dimsBackgroundDuringPresentation = false
+        self.searchController.searchBar.delegate = self
+        self.definesPresentationContext = true
         self.tableView.tableHeaderView = searchController.searchBar
+        self.extendedLayoutIncludesOpaqueBars = true
         
     }
     
@@ -62,20 +63,16 @@ class MainTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDe
             filteredCities = filteredCities.sort({ (a, b) -> Bool in
                 return a < b
             })
-            print("---------------------")
             for cIndex in 0..<filteredCities.count
             {
                 for dIndex in 0..<self.cities.count
                 {
                     if filteredCities[cIndex] == self.cities[dIndex]
                     {
-                        print("\(cIndex) - City: \(filteredCities[cIndex]) / Address: \(self.cityAddr[dIndex])")
                         self.filteredCityAddr.append(self.cityAddr[dIndex])
                     }
                 }
             }
-            print("---------------------")
-            print("City:\(filteredCities.count): Address \(filteredCityAddr.count)")
             (self.sortedFilteredCities, self.sortedFilteredCityAddr) = self.sortData(self.filteredCities, data1: self.filteredCityAddr)
             self.tableView.reloadData()
         }
@@ -83,17 +80,15 @@ class MainTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDe
 
     func readCSV()
     {
-//        let csv = CSV(string: "id,name,address,short,post")
         let csvURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("newCities", ofType: "csv")!)
         do {
             let csv = try CSV(url: csvURL)
             self.cities = csv.columns["Name"]!
             self.cityAddr = csv.columns["Address"]!
             (self.sortedCities, self.sortedCityAddr) = self.sortData(self.cities, data1: self.cityAddr)
-//            self.sortedCityAddr = self.sortData(self.cityAddr)
             self.tableView.reloadData()
-        }catch {
-            print("Error in reading CSV")
+        }catch let error as NSError{
+            print("Error in reading CSV: \(error.localizedDescription)")
         }
     }
     func sortData(data: [String], data1:[String]) -> ([[String]],[[String]])
@@ -145,7 +140,6 @@ class MainTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDe
                     value.append(data[cIndex-1])
                     value1.append(data1[cIndex-1])
                 }
-                print("Index: \(cIndex) in \(data.count)")
             }else{
                 let item = data[cIndex-1]
                 if data.count == 1{
@@ -213,13 +207,8 @@ class MainTableVC: UITableViewController, UISearchResultsUpdating, UISearchBarDe
         }else{
             var dispCityData: [[String]] = []
             var dispCityAddrData: [[String]] = []
-            if searchController.active && searchController.searchBar.text != ""{
-                dispCityData = self.sortedFilteredCities
-                dispCityAddrData = self.sortedFilteredCityAddr
-            }else{
-                dispCityData = self.sortedCities
-                dispCityAddrData = self.sortedCityAddr
-            }
+            dispCityData = searchController.active && searchController.searchBar.text != "" ? self.sortedFilteredCities:self.sortedCities
+            dispCityAddrData = searchController.active && searchController.searchBar.text != "" ? self.sortedFilteredCityAddr:self.sortedCityAddr
             cell.textLabel?.text = dispCityData[indexPath.section][indexPath.row]
             cell.detailTextLabel?.text = dispCityAddrData[indexPath.section][indexPath.row]
         }
